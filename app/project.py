@@ -8,7 +8,7 @@ def read_tasks(planner):
         number = int(row[0])
         title = row[1]
         duration = float(row[2])
-        prerequisites = row[3]
+        prerequisites = set(map(int, row[3].split()))
         tasks[number] = (title, duration, prerequisites)
 
     return tasks
