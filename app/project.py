@@ -20,4 +20,9 @@ print("To run the application, type 'tasks'.")
 
 
 def order_tasks(tasks):
-    
+    incomplete = set(tasks)
+    completed = set()
+    start_days = {}
+    while incomplete:
+        for task_number in incomplete:
+            
