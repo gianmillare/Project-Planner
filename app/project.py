@@ -1,8 +1,8 @@
 import csv
 
-def read_tasks(project_planner):
+def read_tasks(planner):
     tasks = {}
-    for row in csv.reader(open(project_planner)):
+    for row in csv.reader(open(planner)):
         number = row[0]
         title = row[1]
         duration = row[2]
