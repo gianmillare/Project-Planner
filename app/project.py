@@ -17,3 +17,7 @@ def read_tasks(planner):
 tasks = read_tasks("../resources/planner.csv")
 
 print("To run the application, type 'tasks'.")
+
+
+def order_tasks(tasks):
+    
