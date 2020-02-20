@@ -13,4 +13,4 @@ def read_tasks(project_planner):
 
 tasks = read_tasks("../resources/planner.csv")
 
-print("To run the application, type 'execute'.")
+print("To run the application, type 'tasks'.")
