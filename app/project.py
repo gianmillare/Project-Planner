@@ -1,6 +1,7 @@
 import csv
+from collections import namedtuple
 
-encoding='utf-8-sig'
+Task = namedtuple("Task", ["title", "duration", "prerequisites"])
 
 def read_tasks(planner):
     tasks = {}
