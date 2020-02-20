@@ -1,8 +1,10 @@
 import csv
 
+encoding='utf-8-sig'
+
 def read_tasks(planner):
     tasks = {}
-    for row in csv.reader(open(planner)):
+    for row in csv.reader(open(planner, encoding='utf-8-sig')):
         number = row[0]
         title = row[1]
         duration = row[2]
