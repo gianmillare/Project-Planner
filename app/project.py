@@ -1,4 +1,5 @@
 import csv
+import tkinter
 from collections import namedtuple
 
 Task = namedtuple("Task", ["title", "duration", "prerequisites"])
@@ -49,4 +50,12 @@ def order_tasks(tasks):
 
     return start_days
 
-order_tasks(tasks)
+
+# Initial code to call tkinter and open the "tk" window
+root = tkinter.Tk()
+
+# Give the window a title
+root.title("Project Planner")
+
+# Create a button widget
+open_button = tkinter.Button(root, text="Open Projecct...", command=open_project)
