@@ -49,3 +49,4 @@ def order_tasks(tasks):
 
     return start_days
 
+order_tasks(tasks)
