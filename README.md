@@ -6,3 +6,5 @@ This mini-project is from "Beginner's Step-by-Step Coding Course", written by DK
 This is a couple of difficulties higher than my previous mini-project titled "Team_Allocator". This project focuses on using Python to create an interactive planner that reads a CSV file to display the length and priority of a specific task.
 
 ------------------------------------------------------------------------------------------
+![](images/preview.png)
+------------------------------------------------------------------------------------------
