@@ -59,3 +59,11 @@ root.title("Project Planner")
 
 # Create a button widget
 open_button = tkinter.Button(root, text="Open Projecct...", command=open_project)
+open_button.pack(side="top")
+
+# Create a Canvas
+canvas = tkinter.Canvas(root, width=800, height=400, bg="white")
+canvas.pack(side="bottom")
+
+# Main function of tkinter for event-handling
+tkinter.mainloop()
