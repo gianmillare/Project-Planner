@@ -77,6 +77,11 @@ def draw_chart(tasks, canvas, row_height=40, title_width=300,
         canvas.create_text(x + week_width / 2, row_height / 2,
                            text=f"Week {week_number+1}",
                            font=("Helvetica", font_size, "bold"))
+
+        start_days = order_tasks(tasks)
+        y=row_height
+        for task_number in start_days:
+            task = tasks[task_number]
                
 def open_project():
     filename = askopenfilename(title="Open project", initialdir=".", filetypes=[("CSV Document", "*.csv")])
