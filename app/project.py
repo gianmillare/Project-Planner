@@ -104,6 +104,15 @@ def open_project():
     tasks=read_tasks("../resources/planner.csv")
     draw_chart(tasks, canvas)
 
+    # Create a label for the filename
+    filename_label.config(text=filename)
+
+
+# Create another function that will clear the application
+def clear_canvas():
+    filename_label.config(text="")
+    canvas.delete(tkinter.ALL)
+
 # Initial code to call tkinter and open the "tk" window
 root = tkinter.Tk()
 
@@ -120,6 +129,14 @@ button_frame.pack(side="top", fill="x")
 # Create a button widget
 open_button = tkinter.Button(button_frame, text="Upload a Project", command=open_project)
 open_button.pack(side="left")
+
+# Create a button to run the clear_canvas function
+clear_button = tkinter.Button(button_frame, text="Clear", command=clear_canvas)
+clear_button.pack(side="left")
+
+# Position the filename_label
+filename_label = tkinter.Label(button_frame)
+filename_label.pack(side="right")
 
 # Create a Canvas
 canvas = tkinter.Canvas(root, width=800, height=400, bg="white")
