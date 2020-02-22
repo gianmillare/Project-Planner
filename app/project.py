@@ -66,7 +66,17 @@ def draw_chart(tasks, canvas, row_height=40, title_width=300,
     # create a line to separate the header from the rest of the applciation
     canvas.create_line(0, row_height, width, line_height, fill="gray")
 
+    # Begin the loop for the application:
+    for week_number in range(5):
+        x = title_width + week_number * week_width
 
+        # Draw a vertical line to separate x from the rest of the application
+        canvas.create_line(x, 0, x, height, fill="gray")
+        
+        # include the text
+        canvas.create_text(x + week_width / 2, row_height / 2,
+                           text=f"Week {week_number+1}",
+                           font=("Helvetica", font_size, "bold"))
                
 def open_project():
     filename = askopenfilename(title="Open project", initialdir=".", filetypes=[("CSV Document", "*.csv")])
