@@ -51,6 +51,23 @@ def order_tasks(tasks):
 
     return start_days
 
+
+
+def draw_chart(tasks, canvas, row_height=40, title_width=300,
+               line_height=40, day_width=20, bar_height=20,
+               title_indent=20, font_size=-16):
+
+    # define height and width
+    height = canvas["height"]
+    width = canvas["width"]
+
+    week_width = 5 * day_width
+
+    # create a line to separate the header from the rest of the applciation
+    canvas.create_line(0, row_height, width, line_height, fill="gray")
+
+
+               
 def open_project():
     filename = askopenfilename(title="Open project", initialdir=".", filetypes=[("CSV Document", "*.csv")])
 
