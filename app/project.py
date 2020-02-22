@@ -110,9 +110,16 @@ root = tkinter.Tk()
 # Give the window a title
 root.title("Project Planner")
 
+# Prevent any resizing to keep everything in place
+root.resizable(width="False", height="False")
+
+# Create a frame and padding for the Open Project button
+button_frame = tkinter.Frame(root, padx=5, pady=5)
+button_frame.pack(side="top", fill="x")
+
 # Create a button widget
-open_button = tkinter.Button(root, text="Open Project...", command=open_project)
-open_button.pack(side="top")
+open_button = tkinter.Button(button_frame, text="Upload a Project", command=open_project)
+open_button.pack(side="left")
 
 # Create a Canvas
 canvas = tkinter.Canvas(root, width=800, height=400, bg="white")
