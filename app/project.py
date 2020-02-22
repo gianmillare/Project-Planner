@@ -80,8 +80,23 @@ def draw_chart(tasks, canvas, row_height=40, title_width=300,
 
         start_days = order_tasks(tasks)
         y=row_height
+
+        # Loop over the task numbers
         for task_number in start_days:
             task = tasks[task_number]
+            canvas.create_text(title_indent, y + row_height / 2,
+                               text=task.title, anchor=tkinter.W,
+                               font=("Helvetica", font_size))
+
+            # Calculate the positioning of each task
+            bar_x = title_width + start_days[task_number] * day_width
+            bar_y = y + (row_height - bar_height) / 2
+            bar_width = task.duration * day_width
+            canvas.create_rectangle(bar_x, bar_y, bar_x + bar_width,
+                                    bar_y + bar_height, fill="blue")
+
+            y += row_height
+            
                
 def open_project():
     filename = askopenfilename(title="Open project", initialdir=".", filetypes=[("CSV Document", "*.csv")])
